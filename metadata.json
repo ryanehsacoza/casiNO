@@ -1,0 +1,8 @@
+{
+  "name": "Remix Casino Slot Machine",
+  "description": "Server-authoritative Web3 slot machine featuring Sovereign Audit Ledger with Merkle tree verification, multi-chain wallet bridge, Novomatic Double-Up Gamble, Zonke Mystery Boxes, and interactive bonus games with full mobile optimization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@keyframes reel-recoil {
+  0% { transform: translate3d(0, 0, 0); }
+  60% { transform: translate3d(0, -18px, 0); }
+  100% { transform: translate3d(0, -8px, 0); }
+}
+
+.animate-reel-recoil {
+  animation: reel-recoil 0.1s cubic-bezier(0.2, 0.8, 0.4, 1) forwards;
+  will-change: transform;
+}
+
+@keyframes reel-roll {
+  0% {
+    transform: translate3d(0, -50%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-reel-roll {
+  animation: reel-roll 0.12s linear infinite;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+@keyframes spin-trail-pulse {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scaleY(1.15);
+  }
+}
+
+.animate-spin-trail {
+  animation: spin-trail-pulse 0.08s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes vertical-speed-line {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.animate-speed-line {
+  animation: vertical-speed-line 0.18s linear infinite;
+}
+
+@keyframes shimmer-sweep {
+  0% {
+    transform: translateX(-100%) rotate(25deg);
+  }
+  100% {
+    transform: translateX(200%) rotate(25deg);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer-sweep 2.5s infinite ease-in-out;
+}
+
+@keyframes reel-land-bounce {
+  0% {
+    transform: translate3d(0, -22px, 0) scaleY(1.05);
+  }
+  65% {
+    transform: translate3d(0, 6px, 0) scaleY(0.97);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scaleY(1);
+  }
+}
+
+.animate-reel-land {
+  animation: reel-land-bounce 0.22s cubic-bezier(0.175, 0.885, 0.32, 1.25);
+  will-change: transform;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
+@keyframes border-rainbow {
+  0% { border-color: #ef4444; }
+  33% { border-color: #eab308; }
+  66% { border-color: #10b981; }
+  100% { border-color: #ef4444; }
+}
+
+.animate-rainbow-border {
+  animation: border-rainbow 3s linear infinite;
+}
+
+
